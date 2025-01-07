@@ -4,31 +4,72 @@ section#hero {
   padding: 4rem 3.2rem;
   margin-inline: auto;
 
-  & h1 div {
-    display: inline-block;
-    overflow: hidden;
-    height: 8rem;
-    width: min-content;
-    vertical-align: bottom;
+  & h1 {
+    max-width: 64rem;
+
+    & div {
+      display: inline-block;
+      overflow: hidden;
+      height: 8rem;
+      width: min-content;
+      vertical-align: bottom;
+    }
+
+    & span {
+      display: block;
+
+      animation: slideUp 6s infinite ease;
+      &:nth-child(1),
+      &:nth-child(4) {
+        color: var(--snitap-sky-mid);
+      }
+      &:nth-child(2) {
+        color: var(--snitap-joy-mid);
+      }
+      &:nth-child(3) {
+        color: var(--snitap-leaf-mid);
+      }
+    }
   }
 
-  & h1 span:nth-child(1),
-  & h1 span:nth-child(4) {
-    color: var(--snitap-sky-mid);
-  }
+  & .buttons{
+    display: flex;
+    gap: 3.2rem;
+    margin-top: 4.8rem;
 
-  & h1 span:nth-child(2) {
-    color: var(--snitap-joy-mid);
-  }
+    & .button{
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
 
-  & h1 span:nth-child(3) {
-    color: var(--snitap-leaf-mid);
-  }
+      border-radius: 8rem;
 
-  & h1 span {
-    display: block;
+      transition: scale 350ms;
 
-    animation: slideUp 6s infinite ease;
+      &.buy{
+        padding: 2.4rem 4.8rem;
+        background-color: var(--snitap-sun);
+      }
+
+      &.play span{
+        padding: 2.4rem;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+      }
+
+      &:hover{
+        scale: 1.1;
+      }
+    }
+
+    & .shadow{ 
+      box-shadow: 
+      0 2px 5px rgb(0 0 0 / .1),
+      0 9px 9px rgb(0 0 0 / .09),
+      0 20px 12px rgb(0 0 0 / 0.05),
+      0 25px 15px rgb(0 0 0 / .01);
+    }
   }
 }
 
@@ -43,15 +84,15 @@ section#hero {
     transform: translateY(calc(-8rem - 15px));
   }
 
-  25%{
+  25% {
     transform: translateY(calc(-8rem + 10px));
   }
 
-  27%{
+  27% {
     transform: translateY(calc(-8rem - 5px));
   }
 
-  29%{
+  29% {
     transform: translateY(calc(-8rem + 5px));
   }
 
@@ -66,15 +107,15 @@ section#hero {
     transform: translateY(calc(-16rem - 15px));
   }
 
-  58%{
+  58% {
     transform: translateY(calc(-16rem + 10px));
   }
 
-  60%{
+  60% {
     transform: translateY(calc(-16rem - 5px));
   }
 
-  62%{
+  62% {
     transform: translateY(calc(-16rem + 5px));
   }
 
@@ -89,15 +130,15 @@ section#hero {
     transform: translateY(calc(-24rem - 15px));
   }
 
-  91%{
+  91% {
     transform: translateY(calc(-24rem + 10px));
   }
 
-  93%{
+  93% {
     transform: translateY(calc(-24rem - 5px));
   }
 
-  95%{
+  9% {
     transform: translateY(calc(-24rem + 5px));
   }
 
