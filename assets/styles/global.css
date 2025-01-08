@@ -11,6 +11,10 @@ button {
   font: 500 10px/1.5 var(--ff-base);
 }
 
+html{
+  zoom: .5;
+}
+
 :root {
   /* Cores */
   --snitap-sun: #ffcd1e;
